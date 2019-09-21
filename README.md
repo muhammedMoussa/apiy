@@ -14,18 +14,19 @@ apiy({
   method: 'get',
   url: 'https://reqres.in/api/users'
 }).then(res => {
-  conseole.log(res)
+  console.log(res);
 });
 ```
 # Options
 - method: HTTP-method. Usually "GET" or "POST".
 - url:  the URL to request, a string, can be [URL](https://javascript.info/url) object.
-- responseType: "json" (default) – get as JSON (parsed automatically). can set to be 
-   - "" (default) – get as string,
+- responseType: "json"– get as JSON (parsed automatically). can set to be 
+   - "" – get as string,
    - "text" – get as string,
    - "arraybuffer" – get as ArrayBuffer (for binary data, see chapter ArrayBuffer, binary arrays),
    - "blob" – get as Blob (for binary data, see chapter ),
    - "document" – get as XML document (can use XPath and other XML methods),
+ - body: body of request "op" (optional) in "POST", "PUT", "PATCH" methods.
 
 ### Todos :fast_forward:
   - Custom Functions To Every Request.
