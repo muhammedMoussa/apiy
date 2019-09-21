@@ -14,7 +14,7 @@ apiy({
   method: 'get',
   url: 'https://reqres.in/api/users'
 }).then(res => {
-  conseole.log(res)
+  console.log(res);
 });
 ```
 # Options
