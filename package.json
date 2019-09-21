@@ -1,0 +1,28 @@
+{
+  "name": "apiy",
+  "version": "1.0.0",
+  "description": "a lightweight plugin that makes asynchronous api calls, one second of code!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./demo/app.htm",
+    "build": "parcel build ./demo/app.htm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammedMoussa/apiy.git"
+  },
+  "keywords": [
+    "api",
+    "http",
+    "xhr"
+  ],
+  "author": "Muhammed Moussa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammedMoussa/apiy/issues"
+  },
+  "homepage": "https://github.com/muhammedMoussa/apiy#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
