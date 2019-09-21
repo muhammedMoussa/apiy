@@ -1,4 +1,4 @@
-import { apiy } from '../index';
+import { apiy } from '../src/index';
 
 const getBtn = document.getElementById('get-btn');
 const postBtn = document.getElementById('post-btn');
