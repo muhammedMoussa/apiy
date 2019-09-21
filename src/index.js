@@ -40,7 +40,7 @@ export const apiy = (options) => {
         reject('Something went wrong!');
       };
 
-      xhr.send(JSON.stringify(options.data));
+      xhr.send(JSON.stringify(options.body));
     });
 };
 

@@ -23,7 +23,7 @@ const postDemo = () => {
         }
     })
     .then(responseData => {
-        resultDiv.innerText = JSON.stringify(responseData.data);
+        resultDiv.innerText = JSON.stringify(responseData);
     })
     .catch(err => {
         resultDiv.innerText = JSON.stringify(err);
