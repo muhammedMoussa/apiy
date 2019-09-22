@@ -8,14 +8,30 @@
 Then...
 
 ```
-import { apiy } from 'apiy';
+import { apiyCore } from 'apiy';
 
-apiy({
-  method: 'get',
-  url: 'https://reqres.in/api/users'
-}).then(res => {
+const apiy = apiyCore();
+
+apiy.get('https://reqres.in/api/users')
+.then(res => {
   console.log(res);
 });
+
+apiy.post({
+    url: 'https://reqres.in/api/register',
+    body: {
+    email: 'eve.holt@reqres.in',
+    password: 'cityslicka'
+  }
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+  
+  ...
 ```
 # Options
 - method: HTTP-method. Usually "GET" or "POST".
@@ -29,11 +45,12 @@ apiy({
  - body: body of request "op" (optional) in "POST", "PUT", "PATCH" methods.
 
 ### Todos :fast_forward:
-  - Custom Functions To Every Request.
   - Handle Validation For Passed Options.
-  - Handle Utilities.
   - Generic Headers Setting.
   - Handle Custom Callbacks.
+  - Handle Loading boolean.
+  - Handle CORS.
+  - Support ES5 Project.
  
  License :shipit:
 ----
