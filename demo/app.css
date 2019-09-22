@@ -8,3 +8,9 @@ body {
     word-wrap: break-word;
     padding: 20px
 }
+
+.fab {
+    color: #fff;
+    font-size: 2em;
+    padding: 5px
+}
