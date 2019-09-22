@@ -1,17 +1,3 @@
- /*
-    apiy function that takes options param
-    to handle request on it..
-*/
-/* @TODO:
-    - CUSTOME FUNCTIONS TO EVERY REQUEST.. -- DONE!
-    - VALIDATE OPTIONS OBJECT, METHODS, HEADERS..
-    - MOVE HELPERS FUNCTIONS OUT.. --DONE!
-    - SMART HEADERS SETTING..
-    - HANDLE CALLBACKS FUNCTIONS ONLOAD && ONERROR..
-    - HANDLE LOADING BOOLEAN..
-    - HANDLE CORS..
-*/
-
 import { apiy_core } from './core/apiy_core';
 
 export const apiyCore = () => {
