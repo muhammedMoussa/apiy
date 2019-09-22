@@ -18,11 +18,11 @@ apiy.get('https://reqres.in/api/users')
 });
 
 apiy.post({
-    url: 'https://reqres.in/api/register',
-    body: {
-    email: 'eve.holt@reqres.in',
-    password: 'cityslicka'
-  }
+      url: 'https://reqres.in/api/register',
+      body: {
+      email: 'eve.holt@reqres.in',
+      password: 'cityslicka'
+    }
   })
   .then(res => {
     console.log(res);
