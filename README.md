@@ -29,7 +29,7 @@ apiy.post({
   })
   .catch(err => {
     console.log(err);
-  });
+});
   
   ...
 ```
