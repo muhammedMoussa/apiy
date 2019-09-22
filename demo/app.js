@@ -12,7 +12,7 @@ const apiy = apiyCore();
 const getDemo = () => {
     apiy.get('https://reqres.in/api/users')
     .then(res => {
-        resultDiv.innerText = JSON.stringify(res.data);
+        resultDiv.innerText = JSON.stringify(res);
     });
 };
 

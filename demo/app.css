@@ -1,39 +1,10 @@
-html {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
     margin: 0;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/596512f58419c2321fd7e8c5/1558992087406-MX9UK5I6GDUWXSSVHT5R/ke17ZwdGBToddI8pDm48kFeKqvc-R9fxlfd8A-TpgZgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2duawMTocI7zIGwjXH1Op0Ox1a_sDjcQPRZ2GHBG2W-jGCjLISwBs8eEdxAxTptZAUg/website_background.png?format=2500w");
+    color: #cccccc;
 }
 
-button {
-    font: inherit;
-    background: #00c3ff;
-    border: 1px solid #d4f0ed;
-    color: white;
-    cursor: pointer;
-}
-
-button:focus {
-    outline: none;
-}
-
-button:hover,
-button:active {
-    background: #ffffff;
-    border-color: #00c3ff;
-}
-
-section {
-    margin: 0 auto;
-    padding: 20px;
-}
-
-#results {
-    border: 2px solid #00c3ff;
-    max-width: 70%;
-    max-height: 400px;
-    margin: 10px;
-    padding: 10px;
-    word-wrap: break-word
+.card {
+    word-wrap: break-word;
+    padding: 20px
 }
