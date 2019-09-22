@@ -10,6 +10,7 @@
 //     - HANDLE CALLBACKS FUNCTIONS ONLOAD && ONERROR..
 // */
 
+import isValidResponseType from './validators';
 
 export const apiy = (options) => {
     if(!options.responseType
@@ -43,5 +44,3 @@ export const apiy = (options) => {
       xhr.send(JSON.stringify(options.body));
     });
 };
-
-const isValidResponseType = type => ['', 'text', 'arraybuffer', 'blob', 'document', 'json'].includes(type);
