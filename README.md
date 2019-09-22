@@ -42,7 +42,7 @@ apiy.post({
    - "arraybuffer" – get as ArrayBuffer (for binary data, see chapter ArrayBuffer, binary arrays),
    - "blob" – get as Blob (for binary data, see chapter ),
    - "document" – get as XML document (can use XPath and other XML methods),
- - body: body of request "op" (optional) in "POST", "PUT", "PATCH" methods.
+ - body: body of request (optional) in "POST", "PUT", "PATCH" methods.
 
 ### Todos :fast_forward:
   - Handle Validation For Passed Options.
