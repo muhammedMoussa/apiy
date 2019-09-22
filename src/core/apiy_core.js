@@ -13,7 +13,7 @@
     - SUPPORT ES5
 */
 
-import isValidResponseType from '../utils/validators';
+import { isValidResponseType } from '../utils/validators';
 
 const apiy_core = (options) => {
     if(!options.responseType
