@@ -10,6 +10,7 @@
     - HANDLE CALLBACKS FUNCTIONS ONLOAD && ONERROR..
     - HANDLE LOADING BOOLEAN..
     - HANDLE CORS..
+    - SUPPORT ES5
 */
 
 import isValidResponseType from '../utils/validators';
