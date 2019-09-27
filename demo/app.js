@@ -10,7 +10,12 @@ const resultDiv = document.getElementById('results');
 const apiy = apiyCore();
 
 const getDemo = () => {
-    apiy.get('https://reqres.in/api/users')
+    apiy.get({
+        url: 'https://reqres.in/api/users',
+        headers: {
+            'Accept-Language': 'ar-EG',
+        }
+    })
     .then(res => {
         resultDiv.innerText = JSON.stringify(res);
     });
@@ -18,11 +23,15 @@ const getDemo = () => {
 
 const postDemo = () => {
     apiy.post({
+        headers: {
+            'Accept-Language': 'en-US'
+        },
         url: 'https://reqres.in/api/register',
         body: {
             email: 'eve.holt@reqres.in',
             password: 'cityslicka'
-        }
+        },
+
     })
     .then(res => {
         resultDiv.innerText = JSON.stringify(res);

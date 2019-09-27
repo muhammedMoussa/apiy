@@ -14,12 +14,13 @@
 */
 
 import { isValidResponseType } from '../utils/validators';
+import { headersHandler } from '../utils/headers-handler';
 
 const apiy_core = (options) => {
     if(!options.responseType
-        || (options.responseType && !isValidResponseType(options.responseType))
+      || (options.responseType && !isValidResponseType(options.responseType))
     ) {
-        options.responseType = 'json'
+      options.responseType = 'json'
     }
 
     return new Promise((resolve, reject) => {
@@ -31,6 +32,8 @@ const apiy_core = (options) => {
       if (options.body) {
         xhr.setRequestHeader('Content-Type', 'application/json');
       }
+
+      headersHandler(options.headers, xhr);
 
       xhr.onload = () => {
         if (xhr.status === 204) {
