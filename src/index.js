@@ -4,7 +4,8 @@ export const apiyCore = () => {
   const get = (options) => {
     return apiy_core({
       method: 'GET',
-      url: options
+      url: options.url,
+      headers: options.headers
     });
   }
 
@@ -12,7 +13,8 @@ export const apiyCore = () => {
     return apiy_core({
       method: 'POST',
       url: options.url,
-      body: options.body
+      body: options.body,
+      headers: options.headers
     });
   }
 
@@ -20,7 +22,8 @@ export const apiyCore = () => {
     return apiy_core({
       method: 'PUT',
       url: options.url,
-      body: options.body
+      body: options.body,
+      headers: options.headers
     });
   }
 
@@ -28,14 +31,16 @@ export const apiyCore = () => {
     return apiy_core({
       method: 'PATCH',
       url: options.url,
-      body: options.body
+      body: options.body,
+      headers: options.headers
     });
   }
 
   const _delete = (options) => {
     return apiy_core({
       method: 'DELETE',
-      url: options
+      url: options,
+      headers: options.headers
     });
   }
 
