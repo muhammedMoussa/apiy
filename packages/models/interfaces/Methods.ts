@@ -1,8 +1,10 @@
+import { IOptions } from "./Options";
+
 export interface IMethods {
-    get(): void,
-    post(): void,
-    put(): void,
-    patch(): void,
-    delete(): void,
-    options(): void
+    get(options: IOptions): void,
+    post(options: IOptions): void,
+    put(options: IOptions): void,
+    patch(options: IOptions): void,
+    delete(options: IOptions): void,
+    options(options: IOptions): void
 }
