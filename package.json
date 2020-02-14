@@ -5,7 +5,7 @@
   "main": "./dist/app.html",
   "scripts": {
     "dev": "parcel serve ./packages/index.html -p 7474 --open",
-    "clean-dist": "rm -f ./dist/*.js && rm -f ./dist/*.map",
+    "clean-dist": "rm -f ./dist/*",
     "build": "yarn run clean-dist && parcel build ./packages/index.html",
     "run-dist": "parcel serve ./packages/index.html -p 7272 --open"
   },
