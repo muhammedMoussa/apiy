@@ -34,9 +34,10 @@ apiy.post({
   ...
 ```
 # Options
-- method: HTTP-method. Usually "GET" or "POST".
+- method: HTTP-method. Only "GET" (for current version).
 - url:  the URL to request, a string, can be [URL](https://javascript.info/url) object.
-- responseType: "json"– get as JSON (parsed automatically). can set to be 
+- responseType: 
+   - "json"– get as JSON (parsed automatically). default.
    - "" – get as string,
    - "text" – get as string,
    - "arraybuffer" – get as ArrayBuffer (for binary data, see chapter ArrayBuffer, binary arrays),
