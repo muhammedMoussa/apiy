@@ -1,0 +1,33 @@
+{
+  "name": "apiy",
+  "version": "0.0.1",
+  "description": "a lightweight plugin that makes asynchronous api calls, one second of code!",
+  "main": "./dist/app.html",
+  "scripts": {
+    "dev": "parcel serve ./packages/index.html -p 7474 --open",
+    "clean-dist": "rm -f ./dist/*.js && rm -f ./dist/*.map",
+    "build": "yarn run clean-dist && parcel build ./packages/index.html",
+    "run-dist": "parcel serve ./packages/index.html -p 7272 --open"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammedMoussa/apiy.git"
+  },
+  "keywords": [
+    "api",
+    "http",
+    "xhr"
+  ],
+  "author": "Muhammed Moussa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammedMoussa/apiy/issues"
+  },
+  "homepage": "https://github.com/muhammedMoussa/apiy#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2"
+  }
+}
