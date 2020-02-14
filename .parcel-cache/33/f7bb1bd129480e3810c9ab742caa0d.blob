@@ -1,0 +1,51 @@
+!function () {
+  function n(n, r, e, t, o, u, a) {
+    try {
+      var i = n[u](a),
+          c = i.value;
+    } catch (n) {
+      return void e(n);
+    }
+
+    i.done ? r(c) : Promise.resolve(c).then(t, o);
+  }
+
+  (function () {
+    var r,
+        e = (r = regeneratorRuntime.mark(function n() {
+      var r;
+      return regeneratorRuntime.wrap(function (n) {
+        for (;;) switch (n.prev = n.next) {
+          case 0:
+            return n.next = 2, Math.random();
+
+          case 2:
+            r = n.sent, console.log(r);
+
+          case 4:
+          case "end":
+            return n.stop();
+        }
+      }, n);
+    }), function () {
+      var e = this,
+          t = arguments;
+      return new Promise(function (o, u) {
+        var a = r.apply(e, t);
+
+        function i(r) {
+          n(a, o, u, i, c, "next", r);
+        }
+
+        function c(r) {
+          n(a, o, u, i, c, "throw", r);
+        }
+
+        i(void 0);
+      });
+    });
+    return function () {
+      return e.apply(this, arguments);
+    };
+  })()();
+}();

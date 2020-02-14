@@ -1,0 +1,46 @@
+var $eef4d997a4b8e7c1367cd6b42dc9e5$exports = {};
+$parcel$require("31eef4d997a4b8e7c1367cd6b42dc9e5", "../../utils");
+
+/* get function */
+const $eef4d997a4b8e7c1367cd6b42dc9e5$export$Get = options => {
+  const req = new Promise(async (resolve, reject) => {
+    if (!$eef4d997a4b8e7c1367cd6b42dc9e5$import$optionsValidator(options)) {
+      reject('Some Apiy Options Missed!');
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.withCredentials = true;
+    await xhr.open(options.method, options.url);
+    await xhr.send(); // @TODO: UTIL THIS TO READ FROM options
+    // xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.onload = async () => {
+      try {
+        resolve((await $eef4d997a4b8e7c1367cd6b42dc9e5$import$onloadHandler(xhr)));
+      } catch (error) {
+        reject(new Error('Whoops!'));
+      }
+    };
+
+    xhr.onprogress = event => {
+      /* @TODO: HANDLE FOR DOWNLOAD CASES. */
+    };
+
+    xhr.onreadystatechange = () => {
+      // @TODO: UtIL WITH RXJS
+      if (xhr.readyState == 3 || xhr.readyState == 1) {
+        options.loading = true;
+      }
+
+      if (xhr.readyState == 4) {
+        options.loading = false;
+      }
+    };
+
+    xhr.onerror = () => reject(new Error('⛔ Ooops!'));
+  });
+  return req;
+};
+
+$eef4d997a4b8e7c1367cd6b42dc9e5$exports.Get = $eef4d997a4b8e7c1367cd6b42dc9e5$export$Get;

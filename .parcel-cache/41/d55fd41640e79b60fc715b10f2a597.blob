@@ -1,0 +1,49 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Get = void 0;
+
+/* get function */
+const Get = options => {
+  return new Promise(async (resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json'; // @TODO: WRAP IN trycatch
+
+    await xhr.open(options.method, options.url);
+    await xhr.send();
+
+    xhr.onload = async () => {
+      // @TODO: UTIL HANDLE THIS, TAKE STATUS ONLY.
+      if (xhr.status != 200) {
+        reject(new Error("Whoops!"));
+      } else {
+        let response = Object.create(null);
+        delete xhr.response.__proto__;
+        ;
+        response = xhr.response;
+        resolve(response);
+      }
+    };
+
+    xhr.onprogress = event => {
+      /* @TODO: HANDLE FOR DOWNLOAD CASES. */
+    };
+
+    xhr.onreadystatechange = () => {
+      // @TODO: UtIL WITH RXJS
+      if (xhr.readyState == 3 || xhr.readyState == 1) {
+        options.loading = true;
+      }
+
+      if (xhr.readyState == 4) {
+        options.loading = false;
+      }
+    };
+
+    xhr.onerror = () => reject(new Error("⛔ Ooops!"));
+  });
+};
+
+exports.Get = Get;

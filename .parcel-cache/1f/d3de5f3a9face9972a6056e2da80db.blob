@@ -1,0 +1,4 @@
+const sayHi = async () => {
+  const num = await Math.random();
+  console.log(num);
+};

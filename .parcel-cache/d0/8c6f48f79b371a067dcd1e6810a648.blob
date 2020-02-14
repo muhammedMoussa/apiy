@@ -1,0 +1,61 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Apiy = void 0;
+
+var _methods = require("./core/methods");
+
+class Apiy {
+  get options() {
+    return this._options;
+  }
+
+  set options(value) {
+    this._options = value;
+  } // get options(): IOptions {
+  //     return this._options;
+  // }
+  // set options(value: IOptions) {
+  //     this._options = value;
+  // }
+  // constructor(opt: IOptions) {
+  //     this._options = opt;
+  // }
+
+
+  get() {
+    (0, _methods.Get)();
+  }
+
+  post() {
+    return 'post';
+  }
+
+  put() {
+    return 'put';
+  }
+
+  patch() {
+    return 'patch';
+  }
+
+  delete() {
+    return 'delete';
+  }
+
+  options() {
+    return 'options';
+  }
+
+}
+
+exports.Apiy = Apiy;
+const apiy = new Apiy();
+console.log(apiy.get());
+console.log(apiy.post());
+console.log(apiy.put());
+console.log(apiy.patch());
+console.log(apiy.delete());
+console.log(apiy.options());

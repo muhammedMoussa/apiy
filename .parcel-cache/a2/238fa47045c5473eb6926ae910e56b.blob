@@ -1,0 +1,37 @@
+var $e5e3faef69f3f71aedb4278e1961ff$exports = {};
+
+class $e5e3faef69f3f71aedb4278e1961ff$export$Apiy {
+  get() {
+    return 'get';
+  }
+
+  post() {
+    return 'post';
+  }
+
+  put() {
+    return 'put';
+  }
+
+  patch() {
+    return 'patch';
+  }
+
+  delete() {
+    return 'delete';
+  }
+
+  options() {
+    return 'options';
+  }
+
+}
+
+$e5e3faef69f3f71aedb4278e1961ff$exports.Apiy = $e5e3faef69f3f71aedb4278e1961ff$export$Apiy;
+const $e5e3faef69f3f71aedb4278e1961ff$var$apiy = new $e5e3faef69f3f71aedb4278e1961ff$export$Apiy();
+console.log($e5e3faef69f3f71aedb4278e1961ff$var$apiy.get());
+console.log($e5e3faef69f3f71aedb4278e1961ff$var$apiy.post());
+console.log($e5e3faef69f3f71aedb4278e1961ff$var$apiy.put());
+console.log($e5e3faef69f3f71aedb4278e1961ff$var$apiy.patch());
+console.log($e5e3faef69f3f71aedb4278e1961ff$var$apiy.delete());
+console.log($e5e3faef69f3f71aedb4278e1961ff$var$apiy.options());

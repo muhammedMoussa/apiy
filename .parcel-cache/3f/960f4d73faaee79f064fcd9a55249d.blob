@@ -1,0 +1,6 @@
+const $e5e3faef69f3f71aedb4278e1961ff$var$sayHi = async () => {
+  const num = await Math.random();
+  console.log(num);
+};
+
+$e5e3faef69f3f71aedb4278e1961ff$var$sayHi();

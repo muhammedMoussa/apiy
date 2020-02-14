@@ -1,0 +1,63 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.apiyCore = void 0;
+
+var _apiy_core = require("./core/apiy_core");
+
+const apiyCore = () => {
+  const get = options => {
+    return (0, _apiy_core.apiy_core)({
+      method: 'GET',
+      url: options.url,
+      headers: options.headers
+    });
+  };
+
+  const post = options => {
+    return (0, _apiy_core.apiy_core)({
+      method: 'POST',
+      url: options.url,
+      body: options.body,
+      headers: options.headers
+    });
+  };
+
+  const put = options => {
+    return (0, _apiy_core.apiy_core)({
+      method: 'PUT',
+      url: options.url,
+      body: options.body,
+      headers: options.headers
+    });
+  };
+
+  const patch = options => {
+    return (0, _apiy_core.apiy_core)({
+      method: 'PATCH',
+      url: options.url,
+      body: options.body,
+      headers: options.headers
+    });
+  };
+
+  const _delete = options => {
+    return (0, _apiy_core.apiy_core)({
+      method: 'DELETE',
+      url: options,
+      headers: options.headers
+    });
+  };
+
+  return {
+    get,
+    post,
+    put,
+    patch,
+    delete: _delete
+  };
+};
+
+exports.apiyCore = apiyCore;

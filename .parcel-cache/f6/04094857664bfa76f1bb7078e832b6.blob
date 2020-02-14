@@ -1,0 +1,1 @@
+!function(){const o=new class{get(){({})()}post(){return"post"}put(){return"put"}patch(){return"patch"}delete(){return"delete"}options(){return"options"}};console.log(o.get()),console.log(o.post()),console.log(o.put()),console.log(o.patch()),console.log(o.delete()),console.log(o.options())}();

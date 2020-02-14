@@ -1,0 +1,58 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Get = void 0;
+
+/* get function */
+const Get = options => {
+  return new Promise(async (resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    await xhr.open(options.method, options.url);
+
+    try {
+      xhr.send();
+
+      if (xhr.status != 200) {
+        console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+      } else {
+        console.log(xhr.response);
+      }
+    } catch (err) {
+      // instead of onerror
+      console.log("Request failed");
+    } // await xhr.send();
+    // xhr.onload = async () => {
+    //     // @TODO: UTIL HANDLE THIS, TAKE STATUS ONLY.
+    //     if (xhr.status != 200) {
+    //         reject(new Error("Whoops!"));
+    //     } else {
+    //       resolve(xhr.response);
+    //     }
+    // };
+    // xhr.onprogress = function(event) {
+    //     if (event.lengthComputable) {
+    //       console.log(`Received ${event.loaded} of ${event.total} bytes`);
+    //     } else {
+    //       console.log(`Received ${event.loaded} bytes`); // no Content-Length
+    //     }
+    //   };
+    // xhr.onreadystatechange = async () => {
+    //     // @TODO: UtIL WITH RXJS
+    //     if (xhr.readyState == 3 || xhr.readyState == 1) {
+    //         options.loading = true;
+    //     }
+    //     if (xhr.readyState == 4) {
+    //         options.loading = false;
+    //     }
+    // };
+    // xhr.onerror = function() {
+    // reject(new Error("⛔ Whoops!"));
+    // };
+
+  });
+};
+
+exports.Get = Get;

@@ -1,0 +1,41 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Apiy = void 0;
+
+var _core = require("./core");
+
+/* main apiy entry */
+class Apiy {
+  get(opt) {
+    return (0, _core.Get)({
+      method: 'GET',
+      ...opt
+    });
+  }
+
+  post(opt) {
+    return 'post';
+  }
+
+  put(opt) {
+    return 'put';
+  }
+
+  patch(opt) {
+    return 'patch';
+  }
+
+  delete(opt) {
+    return 'delete';
+  }
+
+  options(opt) {
+    return 'options';
+  }
+
+}
+
+exports.Apiy = Apiy;

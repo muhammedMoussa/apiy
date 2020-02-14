@@ -1,0 +1,39 @@
+var $e5e3faef69f3f71aedb4278e1961ff$exports = {};
+$parcel$require("23e5e3faef69f3f71aedb4278e1961ff", "./core/methods");
+
+/* main apiy entry */
+class $e5e3faef69f3f71aedb4278e1961ff$export$Apiy {
+  get(opt) {
+    return $e5e3faef69f3f71aedb4278e1961ff$import$Get({
+      method: 'GET',
+      ...opt
+    });
+  }
+
+  post(opt) {
+    return 'post';
+  }
+
+  put(opt) {
+    return 'put';
+  }
+
+  patch(opt) {
+    return 'patch';
+  }
+
+  delete(opt) {
+    return 'delete';
+  }
+
+  options(opt) {
+    return 'options';
+  }
+
+}
+
+$e5e3faef69f3f71aedb4278e1961ff$exports.Apiy = $e5e3faef69f3f71aedb4278e1961ff$export$Apiy;
+const $e5e3faef69f3f71aedb4278e1961ff$var$apiy = new $e5e3faef69f3f71aedb4278e1961ff$export$Apiy();
+$e5e3faef69f3f71aedb4278e1961ff$var$apiy.get({
+  url: 'https://jsonplaceholder.typicode.com/todos/1'
+}).then(res => console.log(res)).catch(err => console.error(err));

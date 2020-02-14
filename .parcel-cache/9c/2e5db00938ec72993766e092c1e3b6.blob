@@ -1,0 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isValidResponseType = void 0;
+
+const isValidResponseType = type => ['', 'text', 'arraybuffer', 'blob', 'document', 'json'].includes(type);
+
+exports.isValidResponseType = isValidResponseType;

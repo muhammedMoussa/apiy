@@ -1,0 +1,51 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Get = void 0;
+
+/* get function */
+const Get = options => {
+  return new Promise(async (resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    await xhr.open(options.method, options.url);
+    await xhr.send();
+
+    xhr.onload = async () => {
+      // @TODO: UTIL HANDLE THIS, TAKE STATUS ONLY.
+      if (xhr.status != 200) {
+        reject(new Error("Whoops!"));
+      } else {
+        resolve(xhr.response);
+      }
+    };
+
+    xhr.onprogress = function (event) {
+      if (event.lengthComputable) {
+        alert(`Received ${event.loaded} of ${event.total} bytes`);
+      } else {
+        alert(`Received ${event.loaded} bytes`); // no Content-Length
+      }
+    };
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 3) {
+        // loading
+        console.log('loading');
+      }
+
+      if (xhr.readyState == 4) {
+        // request finished
+        console.log('DONE');
+      }
+    };
+
+    xhr.onerror = function () {
+      reject(new Error("⛔ Whoops!"));
+    };
+  });
+};
+
+exports.Get = Get;

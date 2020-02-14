@@ -1,0 +1,13 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "onloadHandler", {
+  enumerable: true,
+  get: function () {
+    return _onloadHandler.onloadHandler;
+  }
+});
+
+var _onloadHandler = require("./handlers/onloadHandler");

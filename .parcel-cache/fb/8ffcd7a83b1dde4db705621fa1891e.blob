@@ -1,0 +1,11 @@
+var $e72d074503fd3edb3428840ed4a6499$exports = {};
+
+const $e72d074503fd3edb3428840ed4a6499$export$optionsValidator = options => {
+  if (!options || !options.url) {
+    return false;
+  }
+
+  return true; // @TODO: EXTEND VALIDATION RULES TO HANDLE body AND query WHEN POST, PUT, DELETE
+};
+
+$e72d074503fd3edb3428840ed4a6499$exports.optionsValidator = $e72d074503fd3edb3428840ed4a6499$export$optionsValidator;

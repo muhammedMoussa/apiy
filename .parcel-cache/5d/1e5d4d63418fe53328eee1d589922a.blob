@@ -1,0 +1,23 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.headersHandler = void 0;
+
+// HEADERS HANDLER.
+const headersHandler = (headers, xhr = new XMLHttpRequest()) => {
+  if (!headers) {
+    return;
+  }
+
+  ;
+
+  for (const header in headers) {
+    if (header) {
+      xhr.setRequestHeader(`${header}`, `${headers[header]}`);
+    }
+  }
+};
+
+exports.headersHandler = headersHandler;

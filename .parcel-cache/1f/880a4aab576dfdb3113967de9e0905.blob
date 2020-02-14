@@ -1,0 +1,27 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Get = void 0;
+
+/* get function */
+const Get = options => {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(options.method, options.url);
+    xhr.send();
+
+    xhr.onload = function () {
+      if (xhr.status != 200) {
+        // analyze HTTP status of the response
+        reject(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+      } else {
+        // show the result
+        resolve(xhr.response); // responseText is the server
+      }
+    };
+  });
+};
+
+exports.Get = Get;

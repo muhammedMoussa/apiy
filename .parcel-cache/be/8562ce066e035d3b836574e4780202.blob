@@ -1,0 +1,15 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.optionsValidator = void 0;
+
+const optionsValidator = options => {
+  if (!options || !options.url) {
+    return false;
+  } // @TODO: EXTEND VALIDATION RULES TO HANDLE body AND query WHEN POST, PUT, DELETE
+
+};
+
+exports.optionsValidator = optionsValidator;

@@ -1,0 +1,16 @@
+body {
+            margin: 0;
+            background-image: url("d37b618b1dbec97c8a8d633b5c42bac9");
+            color: #cccccc;
+        }
+
+        .card {
+            word-wrap: break-word;
+            padding: 20px
+        }
+
+        .fab {
+            color: #fff;
+            font-size: 2em;
+            padding: 5px
+        }

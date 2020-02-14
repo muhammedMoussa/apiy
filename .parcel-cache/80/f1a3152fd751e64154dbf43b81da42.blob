@@ -1,0 +1,42 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Apiy = void 0;
+
+class Apiy {
+  get() {
+    return 'get';
+  }
+
+  post() {
+    return 'post';
+  }
+
+  put() {
+    return 'put';
+  }
+
+  patch() {
+    return 'patch';
+  }
+
+  delete() {
+    return 'delete';
+  }
+
+  options() {
+    return 'options';
+  }
+
+}
+
+exports.Apiy = Apiy;
+const apiy = new Apiy();
+apiy.get();
+apiy.post();
+apiy.put();
+apiy.patch();
+apiy.delete();
+apiy.options();
