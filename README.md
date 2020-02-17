@@ -13,7 +13,7 @@ import { Apiy } from 'apiy';
 
 const apiy = new Apiy();
 
-api.get({ url: 'https://jsonplaceholder.typicode.com/todos/1' })
+apiy.get({ url: 'https://jsonplaceholder.typicode.com/todos/1' })
 .then(res => console.log(res))
 .catch(err => console.log(err))
 ...
