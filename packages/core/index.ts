@@ -1,1 +1,0 @@
-export { Get } from './methods/Get'
