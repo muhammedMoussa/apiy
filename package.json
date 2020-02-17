@@ -1,6 +1,6 @@
 {
   "name": "apiy",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "a lightweight plugin that makes asynchronous api calls, one second of code!",
   "main": "./apiy/",
   "scripts": {
