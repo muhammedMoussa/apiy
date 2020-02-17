@@ -2,9 +2,9 @@
   "name": "apiy",
   "version": "0.0.1",
   "description": "a lightweight plugin that makes asynchronous api calls, one second of code!",
-  "main": "./lib/",
+  "main": "./apiy/",
   "scripts": {
-    "tsc": "rm -f ./lib/* && tsc",
+    "tsc": "rm -f ./apiy/* && tsc",
     "start": "parcel ./demo/index.html"
   },
   "browserslist": [
