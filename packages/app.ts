@@ -4,7 +4,8 @@ import {
     Post,
     Put,
     Delete,
-    Patch
+    Patch,
+    Options
 } from './core';
 
 /* main apiy entry */
@@ -15,5 +16,4 @@ export class Apiy implements IMethods {
     put(opt: IOptions) { return Put({ method: 'PUT', ...opt}); }
     patch = (opt: IOptions) => Patch({ method: 'PATCH', ...opt});
     delete = (opt: IOptions) => Delete({ method: 'DELETE', ...opt});
-    options(opt: IOptions) { return 'options';}
 }

@@ -6,5 +6,4 @@ export interface IMethods {
     put(options: IOptions): void,
     patch(options: IOptions): void,
     delete(options: IOptions): void,
-    options(options: IOptions): void
 }
