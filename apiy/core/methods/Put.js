@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const utils_1 = require("../../utils");
-exports.Post = (options) => {
+exports.Put = (options) => {
     const req = new Promise((resolve, reject) => __awaiter(void 0, void 0, void 0, function* () {
         if (!utils_1.optionsValidator(options)) {
             reject('Some Apiy Options Missed!');

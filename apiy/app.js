@@ -5,7 +5,7 @@ const core_1 = require("./core");
 class Apiy {
     get(opt) { return core_1.Get(Object.assign({ method: 'GET' }, opt)); }
     post(opt) { return core_1.Post(Object.assign({ method: 'POST' }, opt)); }
-    put(opt) { return 'put'; }
+    put(opt) { return core_1.Put(Object.assign({ method: 'PUT' }, opt)); }
     patch(opt) { return 'patch'; }
     delete(opt) { return 'delete'; }
     options(opt) { return 'options'; }
