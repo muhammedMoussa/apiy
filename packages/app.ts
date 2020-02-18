@@ -2,7 +2,8 @@ import { IMethods, IOptions } from './models';
 import {
     Get,
     Post,
-    Put
+    Put,
+    Delete
 } from './core';
 
 /* main apiy entry */
@@ -12,6 +13,6 @@ export class Apiy implements IMethods {
     post(opt: IOptions) { return Post({ method: 'POST', ...opt}); }
     put(opt: IOptions) { return Put({ method: 'PUT', ...opt}); }
     patch(opt: IOptions) { return 'patch';}
-    delete(opt: IOptions) { return 'delete';}
+    delete = (opt: IOptions) => Delete({ method: 'DELETE', ...opt});
     options(opt: IOptions) { return 'options';}
 }
