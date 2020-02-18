@@ -5,6 +5,7 @@ import {
     onloadHandler,
     optionsValidator,
 } from '../../utils';
+import { openXhr } from '../../shared';
 
 export const Get = (options: IOptions): Promise<XMLHttpRequestResponseType> => {
 
@@ -16,7 +17,7 @@ export const Get = (options: IOptions): Promise<XMLHttpRequestResponseType> => {
         xhr.responseType = options.responseType || 'json';
         xhr.withCredentials = true;
 
-        await xhr.open(options.method, options.url);
+        await openXhr(xhr, options);
         await xhr.setRequestHeader('Content-Type', 'application/json');
         await xhr.send();
 
