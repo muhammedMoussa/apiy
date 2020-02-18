@@ -4,16 +4,15 @@ import {
     Post,
     Put,
     Delete,
-    Patch,
-    Options
+    Patch
 } from './core';
 
 /* main apiy entry */
 
 export class Apiy implements IMethods {
-    get(opt: IOptions) { return Get({ method: 'GET', ...opt}); }
-    post(opt: IOptions) { return Post({ method: 'POST', ...opt}); }
-    put(opt: IOptions) { return Put({ method: 'PUT', ...opt}); }
+    get = (opt: IOptions) => Get({ method: 'GET', ...opt});
+    post = (opt: IOptions) => Post({ method: 'POST', ...opt});
+    put = (opt: IOptions) => Put({ method: 'PUT', ...opt});
     patch = (opt: IOptions) => Patch({ method: 'PATCH', ...opt});
     delete = (opt: IOptions) => Delete({ method: 'DELETE', ...opt});
 }
