@@ -34,3 +34,12 @@ apiy.delete({
 .then(res => console.log(res))
 .catch(err => console.log(err))
 
+apiy.patch({
+    url: 'https://jsonplaceholder.typicode.com/posts/1',
+    body: {
+        title: 'foo'
+    }
+})
+.then(res => console.log(res))
+.catch(err => console.log(err))
+

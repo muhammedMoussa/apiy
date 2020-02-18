@@ -8,3 +8,5 @@ var Put_1 = require("./methods/Put");
 exports.Put = Put_1.Put;
 var Delete_1 = require("./methods/Delete");
 exports.Delete = Delete_1.Delete;
+var Patch_1 = require("./methods/Patch");
+exports.Patch = Patch_1.Patch;
