@@ -18,10 +18,12 @@ exports.Patch = (options) => {
             reject('Some Apiy Options Missed!');
         }
         const xhr = new XMLHttpRequest();
+        debugger;
         xhr.responseType = options.responseType || 'json';
         xhr.withCredentials = true;
         yield shared_1.openXhr(xhr, options);
-        yield xhr.setRequestHeader('Content-Type', 'application/json');
+        yield utils_1.headersHandler(xhr, options.headers);
+        // await xhr.setRequestHeader('Content-Type', 'application/json');
         yield xhr.send();
         xhr.onload = () => __awaiter(void 0, void 0, void 0, function* () {
             try {

@@ -21,6 +21,7 @@ exports.Get = (options) => {
         xhr.responseType = options.responseType || 'json';
         xhr.withCredentials = true;
         yield shared_1.openXhr(xhr, options);
+        yield utils_1.headersHandler(xhr, options.headers);
         yield xhr.setRequestHeader('Content-Type', 'application/json');
         yield xhr.send();
         // @TODO: UTIL THIS TO READ FROM options

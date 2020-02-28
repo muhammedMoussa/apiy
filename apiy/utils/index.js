@@ -4,5 +4,7 @@ var responseTypeHandler_1 = require("./handlers/responseTypeHandler");
 exports.responseTypeHandler = responseTypeHandler_1.responseTypeHandler;
 var onloadHandler_1 = require("./handlers/onloadHandler");
 exports.onloadHandler = onloadHandler_1.onloadHandler;
+var headersHandler_1 = require("./handlers/headersHandler");
+exports.headersHandler = headersHandler_1.headersHandler;
 var optionsValidator_1 = require("./validators/optionsValidator");
 exports.optionsValidator = optionsValidator_1.optionsValidator;

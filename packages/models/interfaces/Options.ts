@@ -6,5 +6,7 @@ export interface IOptions {
     url: string;
     body?: any;
     responseType?: 'json' | 'text' | 'arraybuffer' | 'blob' | 'document'| '';
+    headers: object;
     loading?: boolean;
+    allowCors: boolean;
 }
