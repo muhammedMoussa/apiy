@@ -16,9 +16,8 @@ export const Get = (options: IOptions): Promise<XMLHttpRequestResponseType> => {
 
         const xhr = new XMLHttpRequest();
 
-        xhr.responseType = options.responseType || 'json';
         xhr.withCredentials = true;
-        responseTypeHandler()
+        await responseTypeHandler(xhr, options.responseType);
         await openXhr(xhr, options);
         await headersHandler(xhr, options.headers);
         await xhr.send();

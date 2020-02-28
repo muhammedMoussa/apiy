@@ -5,7 +5,8 @@ apiy.get({
     url: 'https://jsonplaceholder.typicode.com/todos/1',
     headers: {
         hhh: 'aaaaaaaa'
-    }
+    },
+    responseType: 'text'
 })
 .then(res => console.log(res))
 .catch(err => console.log(err))
