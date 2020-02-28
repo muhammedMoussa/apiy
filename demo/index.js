@@ -6,6 +6,7 @@ apiy.get({
     headers: {
         hhh: 'aaaaaaaa'
     },
+    allowCors: false,
     responseType: 'text'
 })
 .then(res => console.log(res))
@@ -29,7 +30,12 @@ apiy.get({
 //         title: 'foo',
 //         body: 'bar',
 //         userId: 1
-//     }
+//     },
+//     allowCors: true,
+//         headers: {
+//         hhh: 'aaaaaaaa'
+//     },
+//     responseType: 'text'
 // })
 // .then(res => console.log(res))
 // .catch(err => console.log(err))

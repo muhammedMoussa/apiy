@@ -23,7 +23,6 @@ exports.Patch = (options) => {
         xhr.withCredentials = true;
         yield shared_1.openXhr(xhr, options);
         yield utils_1.headersHandler(xhr, options.headers);
-        // await xhr.setRequestHeader('Content-Type', 'application/json');
         yield xhr.send();
         xhr.onload = () => __awaiter(void 0, void 0, void 0, function* () {
             try {

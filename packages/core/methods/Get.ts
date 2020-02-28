@@ -5,7 +5,8 @@ import {
     onloadHandler,
     optionsValidator,
     headersHandler,
-    responseTypeHandler
+    responseTypeHandler,
+    corsHandler
 } from '../../utils';
 import { openXhr } from '../../shared';
 
@@ -16,7 +17,7 @@ export const Get = (options: IOptions): Promise<XMLHttpRequestResponseType> => {
 
         const xhr = new XMLHttpRequest();
 
-        xhr.withCredentials = true;
+        await corsHandler(xhr, options.allowCors);
         await responseTypeHandler(xhr, options.responseType);
         await openXhr(xhr, options);
         await headersHandler(xhr, options.headers);

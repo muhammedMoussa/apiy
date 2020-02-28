@@ -1,4 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// @TODO: EXTEND VALIDATION
-exports.responseTypeHandler = (responseType) => responseType;
+exports.responseTypeHandler = (xhr, responseType) => {
+    if (responseType && isValidResponseType(responseType)) {
+        xhr.responseType = responseType;
+    }
+    return xhr;
+};
+const isValidResponseType = (responseType) => responseType == 'json' || 'text' || 'arraybuffer' || 'blob' || 'document' || '' ? true : false;

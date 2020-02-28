@@ -19,7 +19,9 @@ exports.Put = (options) => {
         }
         const xhr = new XMLHttpRequest();
         xhr.responseType = options.responseType || 'json';
-        xhr.withCredentials = true;
+        // xhr.withCredentials = true;
+        debugger;
+        yield utils_1.corsHandler(xhr, options.allowCors);
         yield shared_1.openXhr(xhr, options);
         yield xhr.setRequestHeader('Content-Type', 'application/json');
         yield xhr.send();

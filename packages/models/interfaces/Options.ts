@@ -8,5 +8,5 @@ export interface IOptions {
     responseType?: 'json' | 'text' | 'arraybuffer' | 'blob' | 'document'| '';
     headers: object;
     loading?: boolean;
-    allowCors: boolean;
+    allowCors?: boolean;
 }
