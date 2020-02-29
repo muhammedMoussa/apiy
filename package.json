@@ -1,13 +1,11 @@
 {
   "name": "apiy",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "a lightweight plugin that makes asynchronous api calls, one second of code!",
-  "main": "./app.033e4cf3.js",
+  "main": "./apiy/",
   "scripts": {
-    "demo": "parcel serve ./demo/index.html -p 7474 --open",
-    "clean-dist": "rm -f ./dist/*",
-    "build": "yarn run clean-dist && parcel build ./packages/index.html",
-    "run-dist": "parcel serve ./packages/index.html -p 7272 --open"
+    "tsc": "rm -f ./apiy/* && tsc",
+    "start": "tsc && parcel ./demo/index.html"
   },
   "browserslist": [
     "last 2 Chrome versions"

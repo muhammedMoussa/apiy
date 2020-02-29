@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Get_1 = require("./methods/Get");
+exports.Get = Get_1.Get;
+var Post_1 = require("./methods/Post");
+exports.Post = Post_1.Post;
+var Put_1 = require("./methods/Put");
+exports.Put = Put_1.Put;
+var Delete_1 = require("./methods/Delete");
+exports.Delete = Delete_1.Delete;
+var Patch_1 = require("./methods/Patch");
+exports.Patch = Patch_1.Patch;
