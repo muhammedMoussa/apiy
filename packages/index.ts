@@ -1,1 +1,0 @@
-export { Apiy } from './app'
