@@ -6,7 +6,7 @@ export default function Hero() {
             <div className="col s12">
             <h1>APIY</h1>
             <blockquote>
-                a lightweight plugin that makes asynchronous api calls, one second of code!
+                a lightweight plugin that makes asynchronous <b>Api</b> calls, one second of code!
             </blockquote>
             <p>Try it now!</p>
             </div>

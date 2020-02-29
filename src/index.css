@@ -5,13 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/596512f58419c2321fd7e8c5/1558992087406-MX9UK5I6GDUWXSSVHT5R/ke17ZwdGBToddI8pDm48kFeKqvc-R9fxlfd8A-TpgZgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2duawMTocI7zIGwjXH1Op0Ox1a_sDjcQPRZ2GHBG2W-jGCjLISwBs8eEdxAxTptZAUg/website_background.png?format=2500w");
+  color: #cccccc;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  color: rgb(44, 40, 40);
-  height: 100%;
-  padding: 20px;
-  min-height: 500px;
+}
+
+a {
+  color: aliceblue;
+  font-size: 1.5em;
+}
+
+.row { margin: 10px; }
+
+b {
+  background: brown;
 }
