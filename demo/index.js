@@ -4,7 +4,7 @@ const apiy = new Apiy();
 // apiy.get({
 //     url: 'https://jsonplaceholder.typicode.com/todos/1',
 //     headers: {
-//         hhh: 'aaaaaaaa'
+//         test: 'test'
 //     },
 //     allowCors: false,
 //     responseType: 'text'
@@ -20,7 +20,7 @@ const apiy = new Apiy();
 //         userId: 1
 //       },
 //       headers: {
-//             hhh: 'aaaaaaaa'
+//             test: 'test'
 //         },
 //     allowCors: true,
 //       responseType: 'text'
@@ -37,7 +37,7 @@ const apiy = new Apiy();
 //     },
 //     allowCors: true,
 //         headers: {
-//         hhh: 'aaaaaaaa'
+//         test: 'test'
 //     },
 //     responseType: 'text'
 // })
@@ -45,22 +45,27 @@ const apiy = new Apiy();
 // .catch(err => console.log(err))
 
 // apiy.delete({
-//     url: 'https://jsonplaceholder.typicode.com/posts/1'
+//     url: 'https://jsonplaceholder.typicode.com/posts/1',
+//         allowCors: true,
+//             headers: {
+//             test: 'test'
+//         },
+//         responseType: 'text'
 // })
 // .then(res => console.log(res))
 // .catch(err => console.log(err))
 
-apiy.patch({
-    url: 'https://jsonplaceholder.typicode.com/posts/1',
-    body: {
-        title: 'foo'
-    },
-    headers: {
-        'ttt': 'jjjjjj'
-    }
-})
-.then(res => console.log(res))
-.catch(err => console.log(err))
+// apiy.patch({
+//     url: 'https://jsonplaceholder.typicode.com/posts/1',
+//     body: {
+//         title: 'foo'
+//     },
+//     headers: {
+//         'ttt': 'jjjjjj'
+//     }
+// })
+// .then(res => console.log(res))
+// .catch(err => console.log(err))
 
 // console.log('ssss')
 
