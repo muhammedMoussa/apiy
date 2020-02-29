@@ -1,28 +1,32 @@
 import { Apiy } from '../apiy'
 var apiy = new Apiy();
 
-apiy.get({
-    url: 'https://jsonplaceholder.typicode.com/todos/1',
-    headers: {
-        hhh: 'aaaaaaaa'
-    },
-    allowCors: false,
-    responseType: 'text'
-})
-.then(res => console.log(res))
-.catch(err => console.log(err))
-
-// apiy.post({
-//     url: 'https://jsonplaceholder.typicode.com/posts',
-//     body: {
-//         title: 'foo',
-//         body: 'bar',
-//         userId: 1
-//       },
-//       responseType: 'text'
+// apiy.get({
+//     url: 'https://jsonplaceholder.typicode.com/todos/1',
+//     headers: {
+//         hhh: 'aaaaaaaa'
+//     },
+//     allowCors: false,
+//     responseType: 'text'
 // })
 // .then(res => console.log(res))
 // .catch(err => console.log(err))
+
+apiy.post({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    body: {
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+      },
+      headers: {
+            hhh: 'aaaaaaaa'
+        },
+    allowCors: true,
+      responseType: 'text'
+})
+.then(res => console.log(res))
+.catch(err => console.log(err))
 
 // apiy.put({
 //     url: 'https://jsonplaceholder.typicode.com/posts/1',

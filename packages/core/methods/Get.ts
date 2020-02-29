@@ -1,6 +1,5 @@
 /* Apiy get function */
 
-import { IOptions } from '../../models';
 import {
     onloadHandler,
     optionsValidator,
@@ -9,6 +8,7 @@ import {
     corsHandler
 } from '../../utils';
 import { openXhr } from '../../shared';
+import { IOptions } from '../../models';
 
 export const Get = (options: IOptions): Promise<XMLHttpRequestResponseType> => {
 
