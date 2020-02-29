@@ -5,7 +5,9 @@
   "main": "./apiy/",
   "scripts": {
     "tsc": "rm -f ./apiy/* && tsc",
-    "start": "tsc && parcel ./demo/index.html"
+    "start": "tsc && parcel ./demo/index.html",
+    "start-website": "cd website/apiy && yarn start",
+    "build-website": "cd website/apiy && yarn build"
   },
   "browserslist": [
     "last 2 Chrome versions"
