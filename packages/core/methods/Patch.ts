@@ -1,23 +1,27 @@
 /* Apiy post function */
 
-import { IOptions } from '../../models';
 import {
     onloadHandler,
     optionsValidator,
-    headersHandler
+    headersHandler,
+    corsHandler,
+    responseTypeHandler
 } from '../../utils';
 import { openXhr } from '../../shared';
+import { IOptions } from '../../models';
 
-export const Patch = (options: IOptions): Promise<XMLHttpRequestResponseType> => {
+export const Patch = async (options: IOptions): Promise<XMLHttpRequestResponseType> => {
     const req: Promise<XMLHttpRequestResponseType> = new Promise( async (resolve, reject) => {
         if (!optionsValidator(options)) { reject('Some Apiy Options Missed!') }
+
         const xhr = new XMLHttpRequest();
-        debugger
-        xhr.responseType = options.responseType || 'json';
-        xhr.withCredentials = true;
+
+        await corsHandler(xhr, options.allowCors);
+        await responseTypeHandler(xhr, options.responseType);
         await openXhr(xhr, options);
         await headersHandler(xhr, options.headers);
         await xhr.send();
+
         xhr.onload = async () => {
             try { resolve (await onloadHandler(xhr)); }
             catch (error) { reject (new Error('Whoops!')); }

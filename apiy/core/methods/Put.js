@@ -23,7 +23,6 @@ exports.Put = (options) => __awaiter(void 0, void 0, void 0, function* () {
         yield shared_1.openXhr(xhr, options);
         yield utils_1.headersHandler(xhr, options.headers);
         yield xhr.send();
-        debugger;
         xhr.onload = () => __awaiter(void 0, void 0, void 0, function* () {
             try {
                 resolve(yield utils_1.onloadHandler(xhr));
