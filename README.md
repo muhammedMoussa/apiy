@@ -27,7 +27,7 @@ apiy.post({
     headers: {
       'Authorization': 'Bearer token'
     },
-    responseType: 'arraybuffer'
+    responseType: 'text'
   })
   .then(res => {
     console.log(res);
@@ -49,14 +49,15 @@ apiy.post({
   - "document" – get as XML document (can use XPath and other XML methods),
   - json by default.
 - body.
-- allowCors: Can make cross-origin requests, using the same CORS policy, false by default
+- allowCors: Can make cross-origin requests, using the same CORS policy, false by default.
 
 ### Todos :fast_forward:
   - Handle Custom Callbacks.
   - Handle Loading boolean.
   - Support ES5 Project.
- License :shipit:
 ----
+### License :shipit:
+
 ISC
 
 :open_hands:
