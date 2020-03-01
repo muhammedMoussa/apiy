@@ -9,9 +9,9 @@
 Then...
 
 ```
-import { Apiy } from 'apiy';
+import { Apiy } from 'apiy'
 
-const apiy = new Apiy();
+const apiy = new Apiy()
 
 apiy.get({ url: 'https://jsonplaceholder.typicode.com/todos/1' })
 .then(res => console.log(res))
@@ -23,18 +23,12 @@ apiy.post({
       email: 'eve.holt@reqres.in',
       password: 'cityslicka'
     },
+    headers: { 'Authorization': 'Bearer ++token++' },
     allowCors: true,
-    headers: {
-      'Authorization': 'Bearer token'
-    },
     responseType: 'text'
   })
-  .then(res => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err);
-});
+  .then(res => console.log(res))
+  .catch(err => console.log(err))
 
   ...
 ```
