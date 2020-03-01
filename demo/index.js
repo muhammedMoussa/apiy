@@ -1,5 +1,5 @@
-import { Apiy } from '../apiy'
-const apiy = new Apiy();
+// import { Apiy } from '../apiy'
+// const apiy = new Apiy();
 
 // apiy.get({
 //     url: 'https://jsonplaceholder.typicode.com/todos/1',
@@ -66,6 +66,4 @@ const apiy = new Apiy();
 // })
 // .then(res => console.log(res))
 // .catch(err => console.log(err))
-
-// console.log('ssss')
 
